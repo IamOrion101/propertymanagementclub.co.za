@@ -87,37 +87,8 @@
     </nav>
 
     <!-- Hero Section -->
-            <div class="header-banner">
-              <div class="banner-image">
-                <div class="slider">
-                  <img src="images/logo.jpg" alt="Futuristic Property View" class="slider-image active">
+             
 
-
-
-                     <img src="images/picture%201%20(3).jpg" alt="Community Development" class="slider-image">
-
-                     <img src="images/picture%201%20(1).jpg" alt="Community Development" class="slider-image">
-
-                     <img src="images/picture%201%20(2).jpg" alt="Community Development" class="slider-image">
-
-
-                </div>
-              </div>
-                    <div class="header-text">
-                      <h1 style="font-family: 'Bebas Neue', sans-serif; color: black;">
-                        Property Management Club
-                      </h1>
-
-                      <p style="font-family: 'Bebas Neue', sans-serif; color: black; font-size: 18px">
-                        Welcome to Property Management Club — your trusted partner in student accommodation. We specialize in managing safe, affordable, and comfortable living spaces tailored specifically for students.
-                      </p>
-
-                      <a class="button-header fixed-button" href="explore_all_properties.html" style="font-family: 'Bebas Neue', sans-serif;">
-                        Explore All Properties
-                      </a>
-                    </div>
-
-            </div>
 
       
       
@@ -125,14 +96,14 @@
   .slider {
     position: relative;
     width: 800px;
-    height: 550px;
+    height: auto;
     overflow: hidden;
   }
 
   .slider-image {
     position: absolute;
     width: 800px;
-    height: 550px;
+    height: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
   }
@@ -140,8 +111,11 @@
   .slider-image.active {
     opacity: 1;
   }
+
+    
 </style>
 
+      
 <script>
   const images = document.querySelectorAll('.slider-image');
   let current = 0;
@@ -327,6 +301,13 @@
   }
     
     
+    .property{
+        
+        
+        font-size: 17px;
+        
+    }
+    
     
 </style>
 
@@ -374,7 +355,95 @@
 				
     
     
-    
+   <!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<section class="content-box boxstyle-1 box-1">
+  <div class="zerogrid">
+    <div class="row wrap-box"><!--Start Box-->
+
+      <!-- Text Column -->
+      <div class="col-1-2">
+  <div class="wrap-col">
+    <div class="row">
+      <div class="header">
+        <div class="wrapper">
+
+          <!-- Welcome Text -->
+          <div class="intro" style="font-family: 'Bebas Neue', sans-serif; font-size: 19px; color: #555;">
+            Welcome To
+          </div>
+
+          <!-- Line -->
+          <hr class="line" style="border: 1.5px solid #1e90ff; width: 60px; margin: 10px 0;">
+            
+
+          <!-- Heading -->
+          <h2 class= "property "style="font-family: 'Bebas Neue', sans-serif; margin-top: 1cm; color: black !important;">
+          Property Management Club
+        </h2>
+
+
+            
+            
+        </div>
+      </div>
+
+      <!-- Paragraph -->
+      <p class="intro" style="font-family: 'Bebas Neue', sans-serif; font-size: 17px; color: black;">
+        We specialize in offering affordable, secure, and fully furnished student accommodation across South Africa. As a registered property management company, we provide responsive support and ensure a comfortable living environment tailored to students’ needs
+      </p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Image Slider Column -->
+      <div class="col-1-2">
+        <div class="wrap-col">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/logo.jpg" alt="Accommodation 1" style="width: 100%; height: 500px; object-fit: cover;"></div>
+          <div class="swiper-slide"><img src="images/picture%201%20(1).jpg" alt="Accommodation 2" style="width: 100%; height: 500px; object-fit: cover;"></div>
+          <div class="swiper-slide"><img src="images/picture%201%20(2).jpg" alt="Accommodation 3" style="width: 100%; height: 500px; object-fit: cover;"></div>
+                <div class="swiper-slide"><img src="images/picture%201%20(3).jpg" alt="Accommodation 3" style="width: 100%; height: 500px; object-fit: cover;"></div>
+        </div>
+
+            <!-- Optional navigation & pagination -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Include Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper with Autoplay -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000, // 3 seconds
+      disableOnInteraction: false, // Keeps autoplay even after user interacts
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
     
     
     
